@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script language="javascript" type="text/javascript">
+function validar() {
+var nome = form1.nome.value;
+var email = form1.email.value;
+var senha = form1.senha.value;
+var senha1 = form1.senha1.value;
+ 
+if (nome == "") {
+alert('Preencha o campo com seu nome');
+form1.nome.focus();
+return false;
+}
+
+if (email == "") {
+alert('Preencha o campo com seu email');
+form1.email.focus();
+return false;
+}
+if (senha == "") {
+alert('Preencha o campo com sua senha');
+form1.senha.focus();
+return false;
+}
+if (senha1 == "") {
+alert('Repita a senha');
+form1.senha1.focus();
+return false;
+}
+if (senha != senha1) {
+alert('Senhas diferentes');
+form1.senha.focus();
+return false;
+}
+
+return alert('Cadastrado com Sucesso!!') ;
+
+}
+
+
+
+
+</script>
+<link rel="stylesheet" type="text/css" href="apostadorStyle.css" />
+<title> Bolão é Gol </title>
+</head>
+<body>
+	
+	<table>
+	<tr>
+	<td align="left" bgcolor="#191970">
+		<img src="imagens\egol.jpg" width="160"  height="110">
+	</td>
+	<td align="right" width="1150" bgcolor="#191970">
+		<h5> Pesquisar: <input  type="text" name="nome"><input  type="submit" value="ok"></h5>
+		<a href="home.html"><input type="button" value="Sair" ></a>
+	</td>
+	</tr>
+	</table>
+	<br>
+	<br>
+	<table align="center" >
+	<br>
+	<tr>
+	<td align="center">
+		
+		<h2 >Inscreva-se Grátis</h2>
+		<form name="form1" action="home.html" method="post" >
+			Nome Completo: <input  type="text" name="nome">
+			<br>
+			<br>
+			Email: <input type="text" name="email">
+			<br>
+			<br>
+			Senha: <input type="password" name="senha">
+			<br>
+			<br>
+			Nova Senha: <input type="password" name="senha1">	
+			<br>
+			<br>
+			<input type="submit" value="Cadastrar" onclick="return validar()" >
+		</form>
+		<br>
+	</td>
+	</tr>
+
+	</table>
+	
+	
+</body>
